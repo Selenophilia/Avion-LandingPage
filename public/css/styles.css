@@ -155,15 +155,29 @@ body {
 /* About us section */
 
   #about-us {
-      display: flex;
-      flex-direction: row;
+      height: 400px;
 
   }
 
+  #about-us .about-us-image img {
+    height: 300px;
+    margin-left: 100px;
 
-  #about-us-text {
-      display: flex;
-      flex-direction: column;
+}
+  #about-us .about-us-image  {
+      float: left;
+      width: 50%;
+      min-height: 100%;
+
+  }
+
+  #about-us .about-us-text {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 30px;
+    overflow: hidden;
   }
 
 /* Media qurey section */
