@@ -152,6 +152,19 @@ body {
     transition: all 0.4s ease;
 }
 
+/* About us section */
+
+  #about-us {
+      display: flex;
+      flex-direction: row;
+
+  }
+
+
+  #about-us-text {
+      display: flex;
+      flex-direction: column;
+  }
 
 /* Media qurey section */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
