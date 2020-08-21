@@ -148,7 +148,33 @@ body {
         background-color: #CC332E;
    }
     
+/*about us start*/ 
+   /* #about-us{
+        height: 400px;
+        font-size: 3rem;
+    }
+    #about-us .about-img img{
+        height:300px;
+        margin-left: 100px; 
+    }
 
+    #about-us .about-img{
+        float: left;
+        width: 50%;
+        min-height: 100%;
+    } 
+    #about-us .about-content{
+        float: right;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        padding: 50px 30px;
+        overflow: hidden;
+    } 
+    
+    .about-content ul li{
+        text-decoration: none;
+    } */
 
 /* Media qurey section */
 @media screen and  (max-width: 1200px) {
