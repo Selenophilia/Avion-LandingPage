@@ -15,7 +15,6 @@ body {
 .nav {
     width: 100%;
     height: 65px;
-    position: fixed;
     line-height: 65px;
     text-align: center;
 }
@@ -24,24 +23,18 @@ body {
     float: left;
     width: auto;
     height: auto;
-    /* padding-left: 3rem; */
 }
-
-
 .nav div.logo a{
     font-weight: 100;
     font-size: 3.5rem;
     color: #CC332E;
 }
-
 .nav div.logo a span {
     text-decoration: none;
     color: #CC332E;
     font-size: 3.5rem;
     font-weight: 900;
 } 
-
-
 
 .nav div.main_list {
     height: 65px;
@@ -89,6 +82,17 @@ body {
     color: #fff;
 }
 
+.navTrigger {
+    display: none;
+}
+
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
 /* Home section */
 .home {
     width: 100%;
@@ -98,9 +102,6 @@ body {
 	background-size:cover;
 }
 
-.navTrigger {
-    display: none;
-}
 
 .home .covertext {
     float:none; 
@@ -109,7 +110,8 @@ body {
     top: 200px; 
     left: 180px; 
     right: 0px; 
-  }
+    bottom: 0;
+}
   
   .home .covertext{
     font-family: 'lora', 'serif';
@@ -144,12 +146,108 @@ body {
 
    .home .covertext .btn:hover{
         background-color: #CC332E;
+        border: 2px solid #263b5e;
    }
     
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: all 0.4s ease;
+/*about us start*/ 
+   /* #about-us{
+        height: 400px;
+        font-size: 3rem;
+    }
+    #about-us .about-img img{
+        height:300px;
+        margin-left: 100px; 
+    }
+
+    #about-us .about-img{
+        float: left;
+        width: 50%;
+        min-height: 100%;
+    } 
+    #about-us .about-content{
+        float: right;
+        width: 50%;
+        height: 100%;
+        text-align: center;
+        padding: 50px 30px;
+        overflow: hidden;
+    } 
+    
+    .about-content ul li{
+        text-decoration: none;
+    } */
+
+    /*Get Started section*/
+    .get-started {
+        background-color: #263b5e;
+        padding: 120px 40px;
+    }
+
+    .get-started .container {
+        margin: 0 auto;
+    }
+
+    .container h1 {
+        color: white;
+        margin-bottom: 16px;
+        font-family: 'lora', 'serif';
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .container p {
+        font-size: 20px;
+        margin-bottom: 24px;
+        color: white;
+        text-align: center;
+    }
+
+    .getstarted {
+        border: 2px solid white;
+        font-size: 20px;
+        padding: 12px 48px;
+        font-weight: 600;
+        border-radius: 35px;
+        background-color: transparent;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .getstarted:hover {
+        background-color: #CC332E;
+        border: transparent;
+    }
+
+/*footer*/
+footer {
+    background-color: #CC332E;
+    padding: 40px;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h6 {
+    font-size: 16px;
+    color: white;
+    margin-right: 24px;
+    margin-bottom: 0px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin-right: 24px;
+}
+
+footer a:hover {
+    color: white;
 }
 
 /* About us section */
@@ -191,43 +289,50 @@ body {
   }
 
 /* Media qurey section */
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-    .container {
+@media screen and  (max-width: 1200px) {
+   .nav .container {
         margin: auto;
+
     }
     .home .covertext {
         top: 220px; 
-        left: 50px; 
+        left: 100px; 
         right: 0px; 
       }
 }
 
+@media screen and  (max-width: 800px) and   (max-width: 1200px) {
+     .home .covertext {
+         top: 120px; 
+         left: 0; 
+         right: 0; 
+       }
+ }
 @media screen and (max-width:768px) {
-    
     .navTrigger {
         display: block;
     }
     .nav div.logo {
         margin-right: 40px;
+        padding-left: 0;
     }
     .nav div.main_list {
-        position: relative;
-        width: auto;
+        width: 100%;
         height: 0;
         overflow: hidden;
         
     }
-    /* .nav div.show_list {
+    .nav div.show_list {
         height: auto;
         display: none;
-    } */
+    }
     .nav div.main_list span {
         background-color: gray;
     }
     .nav div.main_list ul { 
         flex-direction: column;
         width: 100%;
-        height: 100vw;
+        height: 100vh;
         right: 0;
         left: 0;
         bottom: 0;
@@ -266,24 +371,58 @@ body {
     }
     .home .covertext{
         left: 50px; 
-        padding-left: 20px;
       }
 
-    .home{
-        width: 100%;
-        height: 80%vh;
+    .home .covertext h1{
+        font-size:5rem;
+    }
+    .home .covertext h4,
+    .home .covertext h3{
+      font-size:2rem;
+    }
+      .home{
         background-image: url('../img/hero-page-bg.png');
     }
 
 }
 @media all and (max-width:600px){
+    .nav div.logo {
+        padding: 0;
+    }
     .home .covertext{
         top:150px;
-        left: 0;
+        left: 20px;
         padding: 0;
       }
+
+      .home .covertext h1{
+          font-size:5rem;
+      }
+      .home .covertext h4,
+      .home .covertext h3{
+        font-size:3rem;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        padding: 64px 0px;
+    }
+
+    footer .container h6,a {
+        margin-bottom: 16px;
+    }
 }
 
+@media  (min-width: 500px) {
+    /* .container, .container-sm {
+        max-width: 1000px;
+    } */
+
+    .home .covertext h3{
+        font-size: 1.5rem;
+    }   
+}
 
 /* Animation for hamburger button */
 .navTrigger {
@@ -333,6 +472,11 @@ body {
 
 .navTrigger.active i:nth-child(3) {
     animation: inBtm 0.8s forwards;
+}
+
+.affix {
+    padding: 0;
+    background-color: #fff;
 }
 
 @keyframes inM {
