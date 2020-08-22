@@ -4,7 +4,7 @@ var animating;
 
 $('.navTrigger').click(function () {
     $(this).toggleClass('active');
-    console.log("Clicked menu");
+    console.log("Clicked");
     $("#mainListDiv").toggleClass("show_list");
     $("#mainListDiv").fadeIn();
 
@@ -13,7 +13,7 @@ $('.navTrigger').click(function () {
 $(window).scroll(function() {
             if ($(document).scrollTop() > 50) {
                 $('.nav').addClass('affix');
-                console.log("OK");
+                console.log("wow");
             } else {
                 $('.nav').removeClass('affix');
             }
