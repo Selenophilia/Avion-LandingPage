@@ -1,0 +1,408 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 62.5%;
+}
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    /* padding-left: 3rem; */
+}
+
+
+.nav div.logo a{
+    font-weight: 100;
+    font-size: 3.5rem;
+    color: #CC332E;
+}
+
+.nav div.logo a span {
+    text-decoration: none;
+    color: #CC332E;
+    font-size: 3.5rem;
+    font-weight: 900;
+} 
+
+
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0 0 0 2rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #000;
+    line-height: 65px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav div.main_list ul li a:hover {
+    text-decoration: underline;
+}
+
+.nav div.main_list ul li .btn {
+    text-decoration: none;
+    color: #000;
+    line-height: 40px;
+    border-radius: 35px;
+    padding: 0 20px;    
+    font-size: 2rem;
+}
+
+.nav div.main_list ul li .btn:hover{
+    color: #fff;
+}
+
+/* Home section */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/hero-page.png');
+    background-position: center top;
+	background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.home .covertext {
+    float:none; 
+    margin:0 auto;
+    position: absolute; 
+    top: 200px; 
+    left: 180px; 
+    right: 0px; 
+  }
+  
+  .home .covertext{
+    font-family: 'lora', 'serif';
+  }
+
+  .home .covertext h1{
+    color: #263b5e;
+  }
+  .home .covertext h4{
+    color: #CC332E;
+    font-size: 22px;
+   }
+  .home .covertext h3{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 200;
+    color: #263b5e;
+    font-size: 16px;
+    line-height: 3rem;
+   }
+  .home .covertext .btn{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    background-color: #263b5e;
+    border-color:2px solid #263b5e;
+    color: #fff;
+    line-height: 60px;
+    border-radius: 35px;
+    padding: 0 50px;    
+    font-size: 2rem;
+    margin: 10px 0 0 10px;
+   }
+
+   .home .covertext .btn:hover{
+        background-color: #CC332E;
+   }
+    
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+/* About us section */
+
+  #about-us {
+      height: 400px;
+
+  }
+
+  #about-us .about-us-image img {
+    height: 300px;
+    margin-left: 100px;
+
+}
+  #about-us .about-us-image  {
+      float: left;
+      width: 50%;
+      min-height: 100%;
+
+  }
+
+  #about-us .about-us-text {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    padding: 50px 30px;
+    overflow: hidden;
+  }
+
+  .about-us-title {
+      text-align: left;
+      font-size: 400%;
+  }
+
+  .about-us-list li {
+    text-align: left;
+    list-style: none;
+  }
+
+/* Media qurey section */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        margin: auto;
+    }
+    .home .covertext {
+        top: 220px; 
+        left: 50px; 
+        right: 0px; 
+      }
+}
+
+@media screen and (max-width:768px) {
+    
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-right: 40px;
+    }
+    .nav div.main_list {
+        position: relative;
+        width: auto;
+        height: 0;
+        overflow: hidden;
+        
+    }
+    /* .nav div.show_list {
+        height: auto;
+        display: none;
+    } */
+    .nav div.main_list span {
+        background-color: gray;
+    }
+    .nav div.main_list ul { 
+        flex-direction: column;
+        width: 100%;
+        height: 100vw;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #f9f1f1;
+        background-position:  center top;
+    }
+    
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.main_list ul li .btn {
+        text-decoration: none;
+        color: #000;
+        border-style: none;
+        font-size: 3rem;
+        text-align: right;
+    }
+    /* .nav div.media_button {
+        display: block;
+    } */
+    .nav div.main_list ul li a:hover{
+        text-decoration:underline;
+    }
+    .nav div.main_list ul li .btn:hover{
+        border-style: none;
+        background-color: #f9f1f1;
+        color: #000;
+    }
+    .home .covertext{
+        left: 50px; 
+        padding-left: 20px;
+      }
+
+    .home{
+        width: 100%;
+        height: 80%vh;
+        background-image: url('../img/hero-page-bg.png');
+    }
+
+}
+@media all and (max-width:600px){
+    .home .covertext{
+        top:150px;
+        left: 0;
+        padding: 0;
+      }
+}
+
+
+/* Animation for hamburger button */
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    bottom: 0;
+
+}
+
+.navTrigger i {
+    background-color: #000;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    animation: outT 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    animation: outM 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    animation: outBtm 0.8s backwards;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    animation: inBtm 0.8s forwards;
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+
